@@ -22,7 +22,7 @@ plot([0 10],[0 0],'k:')
 
 n = 1:20;
 [alphaT_nonlocal, k_nonloc] = critvaluenonlocal2(2*L, R, D, k2, ni, n);
-alpha = alphaT_local+0.03;
+alpha = alphaT_nonlocal+0.03;
 q_barra = k2 + D * (ni/k2);
 q_barrabarra = ni-k2;
 DetMk = @(kk) D.*kk.^4 + (-(alpha*(ni-k2)).* (sin(kk.*(R))./(kk.*(R))) + q_barra) .* kk.^2 + q_barrabarra;
